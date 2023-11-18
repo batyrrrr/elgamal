@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    // "types": [
+    //   "node",
+    //   "jest",
+    //   "@testing-library/jest-dom"
+    // ],
+    //  Собираем все через webpack,так что не важно
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    // "module": "es6",
+    // Для поддержки большинства браузеров
+    "target": "ES5",
+    "module": "ESNext",
+    "jsx": "react-jsx",
+    // Компилятор будет обрабатывать не только TS файлы,но и JS файлы
+    "allowJs": true,
+    // строгий режим
+    "strict": true,
+    "moduleResolution": "node",
+    // Для абсолютного импорта
+    "baseUrl": ".",
+    // Для импорта чтобы не было много слешев перед импорта,и + настрой вебпак,загуглить webpack modulesб,необходимые поля прописать в BuildResolvers,
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    // включаем два пункта,в доке сказано включать при версии тайпскрипта > 2.7
+    // позволяет импортировать с помощью import а не require
+    "esModuleInterop": true,
+    // позволяет импортировать без *
+    "allowSyntheticDefaultImports": true
+  },
+  // Из доки копируем две строки вставляем (ГУГЛИТЬ ТС КОНФИГ ФАЙЛ ВЕБПАК)
+  // чтобы работали импорты
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  },
+  // при создании файл jest-setup(нужен для подсказки jest dom,как toHaveClass,toBeInTheDoc и т.д в в идео про rtl тесты на компоненты)
+  "include": [
+    "./config/jest/jest-setup.ts",
+    "./src/**/*.ts",
+    "./src/**/*.tsx"
+  ]
+}

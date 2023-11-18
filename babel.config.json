@@ -1,0 +1,43 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env"
+      // {
+      //   "targets": {
+      //     "node": "current"
+      //   }
+      // }
+    ],
+    "@babel/preset-typescript",
+    [
+      "@babel/preset-react",
+      {
+        "runtime": "automatic"
+      }
+    ]
+    // для storybook
+    // [
+    //   "@babel/preset-typescript",
+    //   {
+    //     "onlyRemoveTypeImports": true,
+    //     "allExtensions": true,
+    //     "isTSX": true
+    //   }
+    // ]
+    // для storybook
+  ],
+  "plugins": []
+  // "plugins": [
+  //   [
+  //     "@babel/plugin-proposal-class-properties",
+  //     {
+  //       "definitions": {
+  //         "__API__": "\"http://localhost:8080\""
+  //       }
+  //     }
+  //   ]
+  // ]
+  // "plugins": [
+  //   "i18next-extract"
+  // ]
+}
