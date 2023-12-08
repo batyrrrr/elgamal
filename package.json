@@ -5,9 +5,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "npm run build:prod",
     "deploy": "gh-pages -d build",
-    "build": "webpack --env mode=production",
+    "build:prod": "webpack",
     "build:dev": "webpack --env mode=development",
     "start:dev": "webpack serve --env mode=development port=3000"
   },
