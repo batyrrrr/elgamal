@@ -4,6 +4,7 @@ import { router } from "./providers/router/router-config"
 
 export const App = () => {
   return (
+
     <RouterProvider router={router} />
 
   )

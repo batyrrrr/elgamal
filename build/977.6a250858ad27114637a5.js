@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdyplom_project=self.webpackChunkdyplom_project||[]).push([[977],{977:(e,t,c)=>{c.r(t),c.d(t,{default:()=>r}),c(294);var n=c(893);const r=function(){return(0,n.jsx)("div",{children:"AdminLayout"})}}}]);
